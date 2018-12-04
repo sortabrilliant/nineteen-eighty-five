@@ -1,0 +1,30 @@
+
+@import "../node_modules/nes.css/scss/base/color-palette.scss";
+@import "../node_modules/nes.css/scss/base/variables.scss";
+@import "../node_modules/nes.css/scss/base/generic.scss";
+
+body {
+    line-height: 1.5em;
+    font-size: $font-size;
+}
+
+p {
+	font-size: $font-size;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-family;
+	font-weight: normal;
+}
+
+.editor-post-title__block {
+	.editor-post-title__input {
+		font-family: $font-family;
+		font-weight: normal;
+	}
+}

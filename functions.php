@@ -8,6 +8,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+function nineteeneightyfive_setup() {
+	// Enqueue editor styles.
+	add_editor_style( 'style-editor.css' );
+}
+add_action( 'after_setup_theme', 'nineteeneightyfive_setup' );
+
 function sbnef_enqueue_styles() {
 	$parent_style = 'twentynineteen';
 
