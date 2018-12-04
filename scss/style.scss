@@ -10,3 +10,54 @@
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  nineteen-eighty-five
 */
+
+@import "../node_modules/nes.css/scss/nes.scss";
+
+body * {
+    font-weight: normal !important;
+}
+
+.author-description .author-link,
+.comment-metadata,
+.comment-reply-link,
+.comments-title,
+.comment-author .fn,
+.discussion-meta-info,
+.entry-meta,
+.entry-footer,
+.main-navigation,
+.no-comments,
+.not-found .page-title,
+.error-404 .page-title,
+.post-navigation .post-title,
+.page-links,
+.page-description,
+.pagination .nav-links,
+.sticky-post,
+.site-title,
+.site-info,
+#cancel-comment-reply-link,
+img::after, h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family;
+}
+
+// Form Styles
+.comment-form label,
+label {
+    font-family: $font-family;
+}
+
+textarea,
+textarea:focus {
+    @extend .input;
+    outline: none;
+}
+
+.button,
+button,
+input[type="button"],
+input[type="submit"] {
+    @extend .btn.is-primary;
+    // @extend .is-primary;
+    font-family: $font-family;
+}
