@@ -37,8 +37,24 @@ body * {
 .site-title,
 .site-info,
 #cancel-comment-reply-link,
-img::after, h1, h2, h3, h4, h5, h6 {
+img::after,
+h1, h2, h3, h4, h5, h6,
+.widget_archive ul li,
+.widget_categories ul li,
+.widget_meta ul li,
+.widget_nav_menu ul li,
+.widget_pages ul li,
+.widget_recent_comments ul li,
+.widget_recent_entries ul li,
+.widget_rss ul li,
+table
+{
     font-family: $font-family;
+}
+
+table {
+    @extend .table;
+    @extend .table.is-bordered;
 }
 
 // Form Styles
@@ -47,10 +63,26 @@ label {
     font-family: $font-family;
 }
 
-textarea,
-textarea:focus {
-    @extend .input;
-    outline: none;
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+    &, &:focus {
+        @extend .input;
+        outline: none;
+    }
 }
 
 .button,
@@ -58,6 +90,5 @@ button,
 input[type="button"],
 input[type="submit"] {
     @extend .btn.is-primary;
-    // @extend .is-primary;
     font-family: $font-family;
 }

@@ -599,25 +599,55 @@ button,
     background-color: #fff;
     box-shadow: -4px 0 #212529, 4px 0 #212529, 4px 4px #fff, 0 4px #212529, 8px 4px #212529, 4px 8px #212529, 8px 8px #212529; }
 
-.table {
+.table, table {
   table-layout: fixed;
   background-color: #fff; }
-  .table.is-centered th {
+  .table.is-centered th, table.is-centered th {
     text-align: center; }
-  .table.is-bordered {
+  .table.is-bordered, table {
     box-shadow: 4px 0 #212529, 0 -4px #212529, -4px 0 #212529, 0 4px #212529; }
-    .table.is-bordered th,
-    .table.is-bordered td {
+    .table.is-bordered th, table th,
+    .table.is-bordered td,
+    table td {
       padding: 0.5rem;
       word-wrap: break-word; }
-    .table.is-bordered tr th + th {
+    .table.is-bordered tr th + th, table tr th + th {
       box-shadow: -4px 0 #212529; }
-    .table.is-bordered tr td {
+    .table.is-bordered tr td, table tr td {
       box-shadow: 0 -4px #212529; }
-    .table.is-bordered tr td:not(:first-child) {
+    .table.is-bordered tr td:not(:first-child), table tr td:not(:first-child) {
       box-shadow: -4px 0 #212529, 0 -4px #212529; }
 
-.input, textarea,
+.input, input[type="text"], input[type="text"]:focus,
+input[type="email"],
+input[type="email"]:focus,
+input[type="url"],
+input[type="url"]:focus,
+input[type="password"],
+input[type="password"]:focus,
+input[type="search"],
+input[type="search"]:focus,
+input[type="number"],
+input[type="number"]:focus,
+input[type="tel"],
+input[type="tel"]:focus,
+input[type="range"],
+input[type="range"]:focus,
+input[type="date"],
+input[type="date"]:focus,
+input[type="month"],
+input[type="month"]:focus,
+input[type="week"],
+input[type="week"]:focus,
+input[type="time"],
+input[type="time"]:focus,
+input[type="datetime"],
+input[type="datetime"]:focus,
+input[type="datetime-local"],
+input[type="datetime-local"]:focus,
+input[type="color"],
+input[type="color"]:focus,
+textarea,
 textarea:focus {
   max-width: 100%;
   padding: 0.5rem 1rem;
@@ -625,20 +655,80 @@ textarea:focus {
   border: none;
   outline-color: #e7e7e7;
   box-shadow: 0 4px #212529, 0 -4px #212529, 4px 0 #212529, -4px 0 #212529; }
-  .input.is-success, textarea.is-success {
+  .input.is-success, input.is-success[type="text"],
+  input.is-success[type="email"],
+  input.is-success[type="url"],
+  input.is-success[type="password"],
+  input.is-success[type="search"],
+  input.is-success[type="number"],
+  input.is-success[type="tel"],
+  input.is-success[type="range"],
+  input.is-success[type="date"],
+  input.is-success[type="month"],
+  input.is-success[type="week"],
+  input.is-success[type="time"],
+  input.is-success[type="datetime"],
+  input.is-success[type="datetime-local"],
+  input.is-success[type="color"],
+  textarea.is-success {
     outline-color: #76c442;
     box-shadow: 0 4px #92cc41, 0 -4px #92cc41, 4px 0 #92cc41, -4px 0 #92cc41; }
-  .input.is-warning, textarea.is-warning {
+  .input.is-warning, input.is-warning[type="text"],
+  input.is-warning[type="email"],
+  input.is-warning[type="url"],
+  input.is-warning[type="password"],
+  input.is-warning[type="search"],
+  input.is-warning[type="number"],
+  input.is-warning[type="tel"],
+  input.is-warning[type="range"],
+  input.is-warning[type="date"],
+  input.is-warning[type="month"],
+  input.is-warning[type="week"],
+  input.is-warning[type="time"],
+  input.is-warning[type="datetime"],
+  input.is-warning[type="datetime-local"],
+  input.is-warning[type="color"],
+  textarea.is-warning {
     outline-color: #f2c409;
     box-shadow: 0 4px #f7d51d, 0 -4px #f7d51d, 4px 0 #f7d51d, -4px 0 #f7d51d; }
-  .input.is-error, textarea.is-error {
+  .input.is-error, input.is-error[type="text"],
+  input.is-error[type="email"],
+  input.is-error[type="url"],
+  input.is-error[type="password"],
+  input.is-error[type="search"],
+  input.is-error[type="number"],
+  input.is-error[type="tel"],
+  input.is-error[type="range"],
+  input.is-error[type="date"],
+  input.is-error[type="month"],
+  input.is-error[type="week"],
+  input.is-error[type="time"],
+  input.is-error[type="datetime"],
+  input.is-error[type="datetime-local"],
+  input.is-error[type="color"],
+  textarea.is-error {
     outline-color: #ce372b;
     box-shadow: 0 4px #e76e55, 0 -4px #e76e55, 4px 0 #e76e55, -4px 0 #e76e55; }
 
 .field > label {
   display: block; }
 
-.field .input, .field textarea,
+.field .input, .field input[type="text"],
+.field input[type="email"],
+.field input[type="url"],
+.field input[type="password"],
+.field input[type="search"],
+.field input[type="number"],
+.field input[type="tel"],
+.field input[type="range"],
+.field input[type="date"],
+.field input[type="month"],
+.field input[type="week"],
+.field input[type="time"],
+.field input[type="datetime"],
+.field input[type="datetime-local"],
+.field input[type="color"],
+.field textarea,
 .field textarea:focus {
   display: block; }
 
@@ -651,7 +741,22 @@ textarea:focus {
     margin: 0;
     margin-right: 1.5rem;
     text-align: right; }
-  .field.is-inline .input, .field.is-inline textarea,
+  .field.is-inline .input, .field.is-inline input[type="text"],
+  .field.is-inline input[type="email"],
+  .field.is-inline input[type="url"],
+  .field.is-inline input[type="password"],
+  .field.is-inline input[type="search"],
+  .field.is-inline input[type="number"],
+  .field.is-inline input[type="tel"],
+  .field.is-inline input[type="range"],
+  .field.is-inline input[type="date"],
+  .field.is-inline input[type="month"],
+  .field.is-inline input[type="week"],
+  .field.is-inline input[type="time"],
+  .field.is-inline input[type="datetime"],
+  .field.is-inline input[type="datetime-local"],
+  .field.is-inline input[type="color"],
+  .field.is-inline textarea,
   .field.is-inline textarea:focus {
     flex-basis: 0;
     flex-grow: 5; }
@@ -1136,13 +1241,52 @@ body * {
 .site-title,
 .site-info,
 #cancel-comment-reply-link,
-img::after, h1, h2, h3, h4, h5, h6 {
+img::after,
+h1, h2, h3, h4, h5, h6,
+.widget_archive ul li,
+.widget_categories ul li,
+.widget_meta ul li,
+.widget_nav_menu ul li,
+.widget_pages ul li,
+.widget_recent_comments ul li,
+.widget_recent_entries ul li,
+.widget_rss ul li,
+table {
   font-family: "Press Start 2P"; }
 
 .comment-form label,
 label {
   font-family: "Press Start 2P"; }
 
+input[type="text"], input[type="text"]:focus,
+input[type="email"],
+input[type="email"]:focus,
+input[type="url"],
+input[type="url"]:focus,
+input[type="password"],
+input[type="password"]:focus,
+input[type="search"],
+input[type="search"]:focus,
+input[type="number"],
+input[type="number"]:focus,
+input[type="tel"],
+input[type="tel"]:focus,
+input[type="range"],
+input[type="range"]:focus,
+input[type="date"],
+input[type="date"]:focus,
+input[type="month"],
+input[type="month"]:focus,
+input[type="week"],
+input[type="week"]:focus,
+input[type="time"],
+input[type="time"]:focus,
+input[type="datetime"],
+input[type="datetime"]:focus,
+input[type="datetime-local"],
+input[type="datetime-local"]:focus,
+input[type="color"],
+input[type="color"]:focus,
 textarea,
 textarea:focus {
   outline: none; }
