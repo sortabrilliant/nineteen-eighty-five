@@ -18,3 +18,9 @@ function sbnef_enqueue_styles() {
 	wp_enqueue_style( 'nineteen-eighty-five', get_stylesheet_directory_uri() . '/style.css', array( $parent_style ) );
 }
 add_action( 'wp_enqueue_scripts', 'sbnef_enqueue_styles' );
+
+function sbnef_comment_form_defaults( $defaults ) {
+	$defaults['submit_button'] = '<button name="%1$s" type="submit" id="%2$s" class="%3$s btn is-primary">%4$s</button>';
+	return $defaults;
+}
+add_filter( 'comment_form_defaults', 'sbnef_comment_form_defaults' );
