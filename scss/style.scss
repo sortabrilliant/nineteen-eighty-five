@@ -13,54 +13,87 @@
 
 @import "../node_modules/nes.css/scss/nes.scss";
 
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Variables
+# Normalize
+# Typography
+	## Headings
+	## Copy
+# Elements
+	## Lists
+	## Tables
+# Forms
+	## Buttons
+	## Fields
+# Navigation
+	## Links
+	## Menus
+	## Next & Previous
+# Accessibility
+# Alignments
+# Clearings
+# Layout
+# Widgets
+# Content
+	## Archives
+	## Posts and pages
+	## Comments
+# Blocks
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+@import "./variables-site/variables-site";
+@import "../../twentynineteen/sass/mixins/mixins-master";
+
+/* Normalize */
+@import "../../twentynineteen/sass/normalize";
+
+/* Typography */
+@import "../../twentynineteen/sass/typography/typography";
+
+/* Elements */
+@import "../../twentynineteen/sass/elements/elements";
+
+/* Forms */
+@import "../../twentynineteen/sass/forms/forms";
+
+/* Navigation */
+@import "../../twentynineteen/sass/navigation/navigation";
+
+/* Accessibility */
+@import "../../twentynineteen/sass/modules/accessibility";
+
+/* Alignments */
+@import "../../twentynineteen/sass/modules/alignments";
+
+/* Clearings */
+@import "../../twentynineteen/sass/modules/clearings";
+
+/* Layout */
+@import "../../twentynineteen/sass/layout/layout";
+
+/* Content */
+@import "../../twentynineteen/sass/site/site";
+
+/* Widgets */
+@import "../../twentynineteen/sass/site/secondary/widgets";
+
+/* Blocks */
+@import "../../twentynineteen/sass/blocks/blocks";
+
+/* Media */
+@import "../../twentynineteen/sass/media/media";
+
 body * {
     font-weight: normal !important;
-}
-
-.author-description .author-link,
-.comment-metadata,
-.comment-reply-link,
-.comments-title,
-.comment-author .fn,
-.discussion-meta-info,
-.entry-meta,
-.entry-footer,
-.main-navigation,
-.no-comments,
-.not-found .page-title,
-.error-404 .page-title,
-.post-navigation .post-title,
-.page-links,
-.page-description,
-.pagination .nav-links,
-.sticky-post,
-.site-title,
-.site-info,
-#cancel-comment-reply-link,
-img::after,
-h1, h2, h3, h4, h5, h6,
-.widget_archive ul li,
-.widget_categories ul li,
-.widget_meta ul li,
-.widget_nav_menu ul li,
-.widget_pages ul li,
-.widget_recent_comments ul li,
-.widget_recent_entries ul li,
-.widget_rss ul li,
-table
-{
-    font-family: $font-family;
 }
 
 table {
     @extend .table;
     @extend .table.is-bordered;
-}
-
-// Form Styles
-.comment-form label,
-label {
-    font-family: $font-family;
 }
 
 input[type="text"],
