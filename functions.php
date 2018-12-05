@@ -14,6 +14,13 @@ function nineteeneightyfive_setup() {
 }
 add_action( 'after_setup_theme', 'nineteeneightyfive_setup' );
 
+function nineteeneightyfive_wp_list_comments_args( $arguments ) {
+	require get_stylesheet_directory() . '/classes/class-nineteeneightyfive-walker-comment.php';
+	$arguments['walker'] = new NineteenEightyFive_Walker_Comment();
+	return $arguments;
+}
+add_filter( 'wp_list_comments_args', 'nineteeneightyfive_wp_list_comments_args' );
+
 function sbnef_enqueue_styles() {
 	$parent_style = 'twentynineteen';
 

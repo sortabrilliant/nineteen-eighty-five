@@ -92,3 +92,20 @@ input[type="submit"] {
     @extend .btn.is-primary;
     font-family: $font-family;
 }
+
+// Comment Styles
+.comment {
+    .comment-body {
+        position: relative;
+    }
+    .comment-author {
+        .avatar {
+            top: unset;
+            bottom: 0;
+        }
+        .post-author-badge {
+            top: unset;
+            bottom: -3px;
+        }
+    }
+}

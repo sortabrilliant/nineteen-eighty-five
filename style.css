@@ -1296,3 +1296,14 @@ button,
 input[type="button"],
 input[type="submit"] {
   font-family: "Press Start 2P"; }
+
+.comment .comment-body {
+  position: relative; }
+
+.comment .comment-author .avatar {
+  top: unset;
+  bottom: 0; }
+
+.comment .comment-author .post-author-badge {
+  top: unset;
+  bottom: -3px; }
