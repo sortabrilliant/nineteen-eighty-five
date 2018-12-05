@@ -1,3 +1,3 @@
 
 ## Where can I learn more?
-Learn more at [sorta brilliant](https://sortabrilliant.com/nineteen-eighty-five/).
+Learn more at [sorta brilliant](https://1985.sortabrilliant.com/).
