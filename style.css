@@ -324,7 +324,19 @@ button,
   50% {
     opacity: 0; } }
 
-.btn {
+.btn, .button, .button:hover, .button:focus,
+.wp-block-button__link,
+.wp-block-button__link:hover,
+.wp-block-button__link:focus,
+button,
+button:hover,
+button:focus,
+input[type="button"],
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="submit"],
+input[type="submit"]:hover,
+input[type="submit"]:focus {
   position: relative;
   display: inline-block;
   padding: 10px 12px;
@@ -333,83 +345,132 @@ button,
   vertical-align: middle;
   cursor: pointer;
   user-select: none;
-  color: #212529;
-  background-color: #fff;
-  box-shadow: inset -4px -4px #adafbc; }
-  .btn:hover, .btn:focus {
+  color: #212529 !important;
+  background-color: #fff !important;
+  box-shadow: 4px 0 0 0 #000, -4px 0 0 0 #000, 0 4px 0 0 #000, 0 -4px 0 0 #000, inset -4px -4px #adafbc; }
+  .btn:hover, .button:hover,
+  .wp-block-button__link:hover,
+  button:hover,
+  input:hover[type="button"],
+  input:hover[type="submit"], .btn:focus, .button:focus,
+  .wp-block-button__link:focus,
+  button:focus,
+  input:focus[type="button"],
+  input:focus[type="submit"] {
     background-color: #e7e7e7;
-    box-shadow: inset -6px -6px #adafbc; }
-  .btn:active {
-    box-shadow: inset 4px 4px #adafbc; }
-  .btn::before, .btn::after {
-    position: absolute;
-    box-sizing: content-box;
-    width: 100%;
-    height: 100%;
-    content: "";
-    border-color: #212529;
-    border-style: solid;
-    border-width: 4px; }
-  .btn::before {
-    top: -4px;
-    left: 0;
-    border-right: 2px;
-    border-left: 2px; }
-  .btn::after {
-    top: 0;
-    left: -4px;
-    border-top: 2px;
-    border-bottom: 2px; }
-  .btn:focus {
+    box-shadow: 4px 0 0 0 #000, -4px 0 0 0 #000, 0 4px 0 0 #000, 0 -4px 0 0 #000, inset -6px -6px #adafbc; }
+  .btn:active, .button:active,
+  .wp-block-button__link:active,
+  button:active,
+  input:active[type="button"],
+  input:active[type="submit"] {
+    box-shadow: 4px 0 0 0 #000, -4px 0 0 0 #000, 0 4px 0 0 #000, 0 -4px 0 0 #000, inset 4px 4px #adafbc; }
+  .btn:focus, .button:focus,
+  .wp-block-button__link:focus,
+  button:focus,
+  input:focus[type="button"],
+  input:focus[type="submit"] {
     outline: 0; }
-  .btn.is-primary, .button,
-  button,
-  input[type="button"],
-  input[type="submit"] {
-    color: #fff;
-    background-color: #209cee;
-    box-shadow: inset -4px -4px #006bb3; }
-    .btn.is-primary:hover, .button:hover,
-    button:hover,
-    input:hover[type="button"],
-    input:hover[type="submit"], .btn.is-primary:focus, .button:focus,
-    button:focus,
-    input:focus[type="button"],
-    input:focus[type="submit"] {
+  .btn.is-primary, .is-primary.button,
+  .is-primary.wp-block-button__link,
+  button.is-primary,
+  input.is-primary[type="button"],
+  input.is-primary[type="submit"] {
+    color: #fff !important;
+    background-color: #209cee !important;
+    box-shadow: 4px 0 0 0 #000, -4px 0 0 0 #000, 0 4px 0 0 #000, 0 -4px 0 0 #000, inset -4px -4px #006bb3; }
+    .btn.is-primary:hover, .is-primary.button:hover,
+    .is-primary.wp-block-button__link:hover,
+    button.is-primary:hover,
+    input.is-primary:hover[type="button"],
+    input.is-primary:hover[type="submit"], .btn.is-primary:focus, .is-primary.button:focus,
+    .is-primary.wp-block-button__link:focus,
+    button.is-primary:focus,
+    input.is-primary:focus[type="button"],
+    input.is-primary:focus[type="submit"] {
       background-color: #108de0;
-      box-shadow: inset -6px -6px #006bb3; }
-    .btn.is-primary:active, .button:active,
-    button:active,
-    input:active[type="button"],
-    input:active[type="submit"] {
-      box-shadow: inset 4px 4px #006bb3; }
-  .btn.is-success {
-    color: #fff;
-    background-color: #92cc41;
-    box-shadow: inset -4px -4px #4aa52e; }
-    .btn.is-success:hover, .btn.is-success:focus {
+      box-shadow: 4px 0 0 0 #000, -4px 0 0 0 #000, 0 4px 0 0 #000, 0 -4px 0 0 #000, inset -6px -6px #006bb3; }
+    .btn.is-primary:active, .is-primary.button:active,
+    .is-primary.wp-block-button__link:active,
+    button.is-primary:active,
+    input.is-primary:active[type="button"],
+    input.is-primary:active[type="submit"] {
+      box-shadow: 4px 0 0 0 #000, -4px 0 0 0 #000, 0 4px 0 0 #000, 0 -4px 0 0 #000, inset 4px 4px #006bb3; }
+  .btn.is-success, .is-success.button,
+  .is-success.wp-block-button__link,
+  button.is-success,
+  input.is-success[type="button"],
+  input.is-success[type="submit"] {
+    color: #fff !important;
+    background-color: #92cc41 !important;
+    box-shadow: 4px 0 0 0 #000, -4px 0 0 0 #000, 0 4px 0 0 #000, 0 -4px 0 0 #000, inset -4px -4px #4aa52e; }
+    .btn.is-success:hover, .is-success.button:hover,
+    .is-success.wp-block-button__link:hover,
+    button.is-success:hover,
+    input.is-success:hover[type="button"],
+    input.is-success:hover[type="submit"], .btn.is-success:focus, .is-success.button:focus,
+    .is-success.wp-block-button__link:focus,
+    button.is-success:focus,
+    input.is-success:focus[type="button"],
+    input.is-success:focus[type="submit"] {
       background-color: #76c442;
-      box-shadow: inset -6px -6px #4aa52e; }
-    .btn.is-success:active {
-      box-shadow: inset 4px 4px #4aa52e; }
-  .btn.is-warning {
-    color: #212529;
-    background-color: #f7d51d;
-    box-shadow: inset -4px -4px #e59400; }
-    .btn.is-warning:hover, .btn.is-warning:focus {
+      box-shadow: 4px 0 0 0 #000, -4px 0 0 0 #000, 0 4px 0 0 #000, 0 -4px 0 0 #000, inset -6px -6px #4aa52e; }
+    .btn.is-success:active, .is-success.button:active,
+    .is-success.wp-block-button__link:active,
+    button.is-success:active,
+    input.is-success:active[type="button"],
+    input.is-success:active[type="submit"] {
+      box-shadow: 4px 0 0 0 #000, -4px 0 0 0 #000, 0 4px 0 0 #000, 0 -4px 0 0 #000, inset 4px 4px #4aa52e; }
+  .btn.is-warning, .is-warning.button,
+  .is-warning.wp-block-button__link,
+  button.is-warning,
+  input.is-warning[type="button"],
+  input.is-warning[type="submit"] {
+    color: #212529 !important;
+    background-color: #f7d51d !important;
+    box-shadow: 4px 0 0 0 #000, -4px 0 0 0 #000, 0 4px 0 0 #000, 0 -4px 0 0 #000, inset -4px -4px #e59400; }
+    .btn.is-warning:hover, .is-warning.button:hover,
+    .is-warning.wp-block-button__link:hover,
+    button.is-warning:hover,
+    input.is-warning:hover[type="button"],
+    input.is-warning:hover[type="submit"], .btn.is-warning:focus, .is-warning.button:focus,
+    .is-warning.wp-block-button__link:focus,
+    button.is-warning:focus,
+    input.is-warning:focus[type="button"],
+    input.is-warning:focus[type="submit"] {
       background-color: #f2c409;
-      box-shadow: inset -6px -6px #e59400; }
-    .btn.is-warning:active {
-      box-shadow: inset 4px 4px #e59400; }
-  .btn.is-error {
-    color: #fff;
-    background-color: #e76e55;
-    box-shadow: inset -4px -4px #8c2022; }
-    .btn.is-error:hover, .btn.is-error:focus {
+      box-shadow: 4px 0 0 0 #000, -4px 0 0 0 #000, 0 4px 0 0 #000, 0 -4px 0 0 #000, inset -6px -6px #e59400; }
+    .btn.is-warning:active, .is-warning.button:active,
+    .is-warning.wp-block-button__link:active,
+    button.is-warning:active,
+    input.is-warning:active[type="button"],
+    input.is-warning:active[type="submit"] {
+      box-shadow: 4px 0 0 0 #000, -4px 0 0 0 #000, 0 4px 0 0 #000, 0 -4px 0 0 #000, inset 4px 4px #e59400; }
+  .btn.is-error, .is-error.button,
+  .is-error.wp-block-button__link,
+  button.is-error,
+  input.is-error[type="button"],
+  input.is-error[type="submit"] {
+    color: #fff !important;
+    background-color: #e76e55 !important;
+    box-shadow: 4px 0 0 0 #000, -4px 0 0 0 #000, 0 4px 0 0 #000, 0 -4px 0 0 #000, inset -4px -4px #8c2022; }
+    .btn.is-error:hover, .is-error.button:hover,
+    .is-error.wp-block-button__link:hover,
+    button.is-error:hover,
+    input.is-error:hover[type="button"],
+    input.is-error:hover[type="submit"], .btn.is-error:focus, .is-error.button:focus,
+    .is-error.wp-block-button__link:focus,
+    button.is-error:focus,
+    input.is-error:focus[type="button"],
+    input.is-error:focus[type="submit"] {
       background-color: #ce372b;
-      box-shadow: inset -6px -6px #8c2022; }
-    .btn.is-error:active {
-      box-shadow: inset 4px 4px #8c2022; }
+      box-shadow: 4px 0 0 0 #000, -4px 0 0 0 #000, 0 4px 0 0 #000, 0 -4px 0 0 #000, inset -6px -6px #8c2022; }
+    .btn.is-error:active, .is-error.button:active,
+    .is-error.wp-block-button__link:active,
+    button.is-error:active,
+    input.is-error:active[type="button"],
+    input.is-error:active[type="submit"] {
+      box-shadow: 4px 0 0 0 #000, -4px 0 0 0 #000, 0 4px 0 0 #000, 0 -4px 0 0 #000, inset 4px 4px #8c2022; }
 
 .container {
   position: relative;
@@ -4578,12 +4639,23 @@ textarea {
   textarea:focus {
     outline: none; }
 
-.button,
+.button, .button:hover, .button:focus,
+.wp-block-button__link,
+.wp-block-button__link:hover,
+.wp-block-button__link:focus,
 button,
+button:hover,
+button:focus,
 input[type="button"],
-input[type="submit"] {
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="submit"],
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  padding: 10px 12px;
+  margin: 4px !important;
   font-family: "Press Start 2P";
-  border-radius: 0; }
+  border-radius: 0 !important; }
 
 .comment .comment-body {
   position: relative; }

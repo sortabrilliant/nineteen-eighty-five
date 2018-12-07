@@ -126,12 +126,17 @@ textarea {
 }
 
 .button,
+.wp-block-button__link,
 button,
 input[type="button"],
 input[type="submit"] {
-    @extend .btn.is-primary;
-    font-family: $font-family;
-    border-radius: 0;
+    &, &:hover, &:focus {
+        @extend .btn;
+        padding: 10px 12px;
+        margin: 4px !important;
+        font-family: $font-family;
+        border-radius: 0 !important;
+    }
 }
 
 // Comment Styles
