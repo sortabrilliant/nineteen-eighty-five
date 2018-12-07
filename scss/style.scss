@@ -155,3 +155,17 @@ input[type="submit"] {
         }
     }
 }
+
+h1:not(.site-title), h2,
+.comments-area .comments-title-wrap .comments-title,
+.entry .entry-title,
+.author-bio .author-title {
+	&:before {
+		background: $color__text-light;
+		content: "\020";
+		display: block;
+		height: 4px;
+		margin: $size__spacing-unit 0;
+		width: 64px;
+	}
+}

@@ -4667,3 +4667,14 @@ input[type="submit"]:focus {
 .comment .comment-author .post-author-badge {
   top: unset;
   bottom: -3px; }
+
+h1:not(.site-title):before, h2:before,
+.comments-area .comments-title-wrap .comments-title:before,
+.entry .entry-title:before,
+.author-bio .author-title:before {
+  background: #767676;
+  content: "\020";
+  display: block;
+  height: 4px;
+  margin: 1rem 0;
+  width: 64px; }
