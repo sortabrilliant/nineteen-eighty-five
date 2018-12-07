@@ -15,8 +15,18 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function nineteeneightyfive_setup() {
 	add_editor_style( 'style-editor.css' );
+
+	// Set our default color for the customizer.
+	set_theme_mod( 'primary_color', 'custom' );
+	set_theme_mod( 'primary_color_hue', 356 );
 }
 add_action( 'after_setup_theme', 'nineteeneightyfive_setup' );
+
+// Alter custom color lightness value.
+function nineteeneightyfive_custom_colors_lightness( $lightness ) {
+	return 45;
+}
+add_filter( 'twentynineteen_custom_colors_lightness', 'nineteeneightyfive_custom_colors_lightness' );
 
 /**
  * Override the parent theme's Comment's Walker class.
