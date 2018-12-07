@@ -87,6 +87,9 @@
 /* Media */
 @import "../../twentynineteen/sass/media/media";
 
+/* Ninja Forms */
+@import "./ninja-forms";
+
 body * {
     font-weight: normal !important;
 }
@@ -112,6 +115,10 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
+    padding: 0.5rem 1rem !important;
+    margin: 4px !important;
+    border: none;
+
     &, &:focus {
         @extend .input;
         outline: none;
@@ -124,6 +131,7 @@ input[type="button"],
 input[type="submit"] {
     @extend .btn.is-primary;
     font-family: $font-family;
+    border-radius: 0;
 }
 
 // Comment Styles
